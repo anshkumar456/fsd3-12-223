@@ -1,4 +1,3 @@
-// orderSystem.mjs
 import { EventEmitter } from "node:events";
 
 class OrderSystem extends EventEmitter {
@@ -50,6 +49,8 @@ orderSystem.placeOrder({
   items: [
     { name: "Wireless Mouse", qty: 1 },
     { name: "Mechanical Keyboard", qty: 1 },
+    { name: "Wireless headset", qty: 2 },
+    { name: "HP Laptop", qty: 1 },
   ],
-  total: 2499,
+  total: 52499,
 });

@@ -1,16 +1,16 @@
-# NPM project 
+# NPM Project
 
-1. go to project folder (by cd )
+1. goto project folder (by cd)
 2. type `npm init -y`
 3. open package.json
 4. update `type:module`
 5. install nodemon `npm i nodemon -D`
-6. update script in package. jason
+6. update script in package.json
 
 ```
 script{
-    "start":"node app .js"
-    "dev":"nodemon prg7.js"
+    "start": "node app.js",
+    "dev": "nodemon prg7.js"
 }
 ```
 
@@ -18,7 +18,10 @@ script{
 8. to run use `npm run dev`
 
 ## REST API
-- majorly backend server return only data not html file 
-- REST API uses (get, post, put, patch, delete) method to communicate with client 
--any browser can check only get method
--
+
+### Representational State Transfer (REST)
+
+- majorly backend server return only data not html file
+- REST API uses (get, post, put, patch, delete) method to communicate with client
+- any browser can check only get method
+- for other method type we use third party API Tester like postman, thunder client, echo api etc

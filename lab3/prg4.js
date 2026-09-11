@@ -1,7 +1,7 @@
 import http from "http";
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { "content-type": "application/json" });
+  res.writeHead(200, { "content-type": "text/json" });
   console.log("Client ULR:", req.url);
 
   const product = [
@@ -16,12 +16,6 @@ const server = http.createServer((req, res) => {
       price: 95000,
       qty: 1,
       discount: 25,
-    },
-      {
-      name: "key board",
-      price: 15000,
-      qty: 1,
-      discount: 30,
     },
   ];
   res.end(JSON.stringify(product));

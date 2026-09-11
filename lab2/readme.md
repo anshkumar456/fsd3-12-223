@@ -1,16 +1,11 @@
-#EventLoop
+# File System (FS Module)
 
-Js is synchronous and single threaded bydefault 
+# CRUD Project
 
-## There can be async behaviour 
-- with BrowserAPI- setTimeout,setInterval,setImmediate,nextTick
-- with promises
-- with event handlers 
-a function not execuited immediately but it must be execuited after a while.
-it has some status during the execution .
-at final it may resolve 
-modern java script is divided into two catogery
-first < commonJs(.cjs)> support oops , require
--priority
-second< moduleJs(.mjs)> follow modern approch , import
--priority
+assume we are making a cart related project
+
+1. user can add any product (id,name,price,qty) into cart
+2. user can see all the items of cart
+3. user can remove item from cart
+4. user can also update quantity of product
+5. all the items should be stored after temination of project

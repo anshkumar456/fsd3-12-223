@@ -1,34 +1,35 @@
 import { EventEmitter } from "events";
 
+class DomClass extends EventEmitter {
+  addEventListener(eventName, callback) {
+    this.on(eventName, callback);
+  }
+  removeEventListener(eventName, callback) {
+    this.off(eventName, callback);
+  }
 
-class Domclass extends EventEmitter{
-    addEventListener(eventName, callback){
-        this.on(eventName,callback);
-    }
-    removeEventListner(eventName, callback){
-        this.off()
-    }
-
-    dispatchEvent(eventName, eventdata ={}){
-        const event ={
-            timespan: new Date();
-            ...eventdata,
-        };
-        this.event(eventName ,event)
-    }
+  dispatchEvent(eventName, eventData = {}) {
+    const event = {
+      type: eventName,
+      timespam: new Date(),
+      ...eventData,
+    };
+    this.emit(eventName, event);
+  }
 }
 
-const button = new Domclass();
-const handleclick = (event) => {
-    console.log('Button clicked type : $ {event.type} at ${event.timespan}');
+const button = new DomClass();
+
+const handleClick = (event) => {
+  console.log(`Button clicked type: ${event.type} at ${event.timespam}`);
 };
 
-button.addEventListener("click",handleclick);
+button.addEventListener("click", handleClick);
 button.dispatchEvent("click", {
-    target:"submitBtn",
+  target: "submitBtn",
 });
 
-button.removeEventListner("click",handleclicl);
-button.dispatchEvent("click",{
-    target:"resetBtn",
+button.removeEventListener("click", handleClick);
+button.dispatchEvent("click", {
+  target: "resetBtn",
 });
