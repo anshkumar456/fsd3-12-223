@@ -1,9 +1,9 @@
 import http from "http";
 
 const server = http.createServer((req, res) => {
-  if ((req.url === "/api/users"&& req.method === "GET")) {
+  if ((req.url === "/api/users" && req.method === "GET")) {
     res.end(JSON.stringify({ msg: "all users" }));
-  } else if ((req.url === "/api/users"&& req.method === "POST")) {
+  } else if ((req.url === "/api/users" && req.method === "POST")) {
     res.end(JSON.stringify({ msg: "add user" }));
   } else if ((req.url === "/api/users/1"&& req.method === "GET")) {
     res.end(JSON.stringify({ msg: "single user with id 1" }));
